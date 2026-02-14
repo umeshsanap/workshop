@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureBright AI Workshop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* FutureBright Brand Colors from Logo */
+            --fb-dark: #0a1628;
+            --fb-darker: #050d18;
+            --fb-orange: #f5a623;
+            --fb-orange-glow: rgba(245, 166, 35, 0.5);
+            --fb-cyan: #00d4ff;
+            --fb-cyan-glow: rgba(0, 212, 255, 0.5);
+            --fb-green: #2ecc71;
+            --fb-green-glow: rgba(46, 204, 113, 0.5);
+            --fb-blue: #1e90ff;
+            --fb-blue-glow: rgba(30, 144, 255, 0.5);
+        }
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--fb-darker);
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        /* Circuit Board Pattern */
+        .circuit-bg {
+            background-color: var(--fb-dark);
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(245, 166, 35, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(46, 204, 113, 0.02) 0%, transparent 50%);
+            position: relative;
+        }
+        
+        .circuit-bg::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0v10m0 10v10m0 10v10m0 10v10M0 30h10m10 0h10m10 0h10m10 0h10' stroke='%2300d4ff' stroke-width='0.3' fill='none' opacity='0.08'/%3E%3Ccircle cx='30' cy='30' r='2' fill='%2300d4ff' opacity='0.1'/%3E%3Ccircle cx='10' cy='10' r='1.5' fill='%23f5a623' opacity='0.08'/%3E%3Ccircle cx='50' cy='50' r='1.5' fill='%232ecc71' opacity='0.08'/%3E%3Ccircle cx='10' cy='50' r='1' fill='%2300d4ff' opacity='0.06'/%3E%3Ccircle cx='50' cy='10' r='1' fill='%23f5a623' opacity='0.06'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .glass {
+            background: rgba(10, 22, 40, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 212, 255, 0.15);
+        }
+        
+        .glass-orange {
+            background: rgba(10, 22, 40, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(245, 166, 35, 0.2);
+        }
+        
+        .glass-green {
+            background: rgba(10, 22, 40, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(46, 204, 113, 0.2);
+        }
+        
+        /* Neon Glow Effects */
+        .neon-cyan {
+            text-shadow: 0 0 10px var(--fb-cyan-glow), 0 0 20px var(--fb-cyan-glow), 0 0 40px var(--fb-cyan-glow);
+        }
+        
+        .neon-orange {
+            text-shadow: 0 0 10px var(--fb-orange-glow), 0 0 20px var(--fb-orange-glow), 0 0 40px var(--fb-orange-glow);
+        }
+        
+        .neon-green {
+            text-shadow: 0 0 10px var(--fb-green-glow), 0 0 20px var(--fb-green-glow), 0 0 40px var(--fb-green-glow);
+        }
+        
+        .box-glow-cyan {
+            box-shadow: 0 0 20px var(--fb-cyan-glow), 0 0 40px rgba(0, 212, 255, 0.2);
+        }
+        
+        .box-glow-orange {
+            box-shadow: 0 0 20px var(--fb-orange-glow), 0 0 40px rgba(245, 166, 35, 0.2);
+        }
+        
+        .box-glow-green {
+            box-shadow: 0 0 20px var(--fb-green-glow), 0 0 40px rgba(46, 204, 113, 0.2);
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--fb-orange), var(--fb-cyan), var(--fb-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .animate-pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--fb-darker);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--fb-cyan), var(--fb-green));
+            border-radius: 4px;
+        }
+        
+        /* Section backgrounds */
+        .section-alt {
+            background: linear-gradient(180deg, rgba(0, 212, 255, 0.02) 0%, transparent 100%);
+        }
+        
+        .section-alt-2 {
+            background: linear-gradient(180deg, rgba(245, 166, 35, 0.02) 0%, transparent 100%);
+        }
+        
+        /* Hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+<body class="circuit-bg min-h-screen">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
