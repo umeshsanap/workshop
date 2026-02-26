@@ -1,6 +1,8 @@
 
 import React from 'react';
-import { Target, Eye, Mail, Phone, Globe, Linkedin, Instagram, Youtube, Building2 } from 'lucide-react';
+import { Target, Eye, Mail, Phone, Globe, Linkedin, Instagram, Youtube, Building2, FileEdit, ExternalLink } from 'lucide-react';
+
+const ENQUIRY_FORM_URL = 'https://forms.gle/RujEY3ky5A3YkZeh6';
 
 export const FutureBrightPage: React.FC = () => {
   return (
@@ -37,6 +39,23 @@ export const FutureBrightPage: React.FC = () => {
             Deliver hands-on training, career guidance, and mentorship through authentic IT workflows—from software development to AI integration—so every learner can thrive in modern tech roles.
           </p>
         </div>
+
+        <a
+          href={ENQUIRY_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block glass rounded-2xl p-8 border border-[#f5a623]/20 animate-fade-in-right stagger-5 hover:border-[#f5a623]/50 transition-all duration-300 hover:scale-[1.01] group"
+        >
+          <h2 className="text-xl font-bold mb-3 flex items-center gap-2 text-[#f5a623]" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+            <FileEdit className="w-5 h-5" /> Enquiry Form
+          </h2>
+          <p className="text-slate-400 leading-relaxed mb-4">
+            Have a question or want to get in touch? Fill out our enquiry form for Website and Software enquiries.
+          </p>
+          <span className="inline-flex items-center gap-2 text-[#00d4ff] font-semibold group-hover:gap-3 transition-all">
+            Open form <ExternalLink className="w-4 h-4" />
+          </span>
+        </a>
 
         <div className="glass rounded-2xl p-8 border border-[#2ecc71]/20 animate-fade-in-up stagger-6 animate-float-slow">
           <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-[#2ecc71]" style={{ fontFamily: 'Orbitron, sans-serif' }}>
@@ -82,7 +101,7 @@ export const FutureBrightPage: React.FC = () => {
               </a>
             </div>
             <div className="space-y-4">
-              <a href="https://www.linkedin.com/company/futurebright-it-solutions-pvt-ltd-nashik" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-slate-700/50">
+              <a href="https://www.linkedin.com/company/futurebright-it-solutions-pvt-ltd/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-slate-700/50">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#0077b5]/20">
                   <Linkedin className="w-6 h-6 text-[#0077b5]" />
                 </div>
