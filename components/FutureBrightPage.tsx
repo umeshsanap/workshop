@@ -7,20 +7,20 @@ export const FutureBrightPage: React.FC = () => {
     <div className="max-w-4xl mx-auto relative z-10 min-h-[80vh]">
       <div className="text-center mb-12">
         <div
-          className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-4"
+          className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-4 animate-fade-in-down stagger-1"
           style={{ background: 'rgba(245, 166, 35, 0.1)', border: '1px solid rgba(245, 166, 35, 0.3)', color: '#f5a623' }}
         >
           About Us
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-2" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-          <span className="text-[#00d4ff]">Future</span>
-          <span className="text-[#2ecc71]">Bright</span>
+          <span className="text-[#00d4ff] inline-block animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards', opacity: 0 }}>Future</span>
+          <span className="text-[#2ecc71] inline-block animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards', opacity: 0 }}>Bright</span>
         </h1>
-        <p className="text-slate-400">Vision, Mission &amp; Connect with us</p>
+        <p className="text-slate-400 animate-fade-in-up stagger-3">Vision, Mission &amp; Connect with us</p>
       </div>
 
       <div className="space-y-8">
-        <div className="glass rounded-2xl p-8 border border-[#f5a623]/20">
+        <div className="glass rounded-2xl p-8 border border-[#f5a623]/20 animate-fade-in-right stagger-4 animate-float-subtle">
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-[#f5a623]" style={{ fontFamily: 'Orbitron, sans-serif' }}>
             <Eye className="w-5 h-5" /> Vision
           </h2>
@@ -29,7 +29,7 @@ export const FutureBrightPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="glass rounded-2xl p-8 border border-[#00d4ff]/20">
+        <div className="glass rounded-2xl p-8 border border-[#00d4ff]/20 animate-fade-in-left stagger-5 animate-float-delay">
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-[#00d4ff]" style={{ fontFamily: 'Orbitron, sans-serif' }}>
             <Target className="w-5 h-5" /> Mission
           </h2>
@@ -38,7 +38,7 @@ export const FutureBrightPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="glass rounded-2xl p-8 border border-[#2ecc71]/20">
+        <div className="glass rounded-2xl p-8 border border-[#2ecc71]/20 animate-fade-in-up stagger-6 animate-float-slow">
           <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-[#2ecc71]" style={{ fontFamily: 'Orbitron, sans-serif' }}>
             <Building2 className="w-5 h-5" /> Social Media &amp; Contact
           </h2>

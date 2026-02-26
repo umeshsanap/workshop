@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { Award, Lightbulb, UserCheck } from 'lucide-react';
+
+const slideClasses = ['animate-fade-in-left', 'animate-fade-in-right', 'animate-fade-in-left'];
 
 export const Objectives: React.FC = () => {
   const goals = [
@@ -28,15 +29,15 @@ export const Objectives: React.FC = () => {
     <div className="max-w-5xl mx-auto relative z-10">
       <div className="text-center mb-14">
         <div
-          className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-4"
+          className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-4 animate-fade-in-down stagger-1"
           style={{ background: 'rgba(245, 166, 35, 0.1)', border: '1px solid rgba(245, 166, 35, 0.3)', color: '#f5a623' }}
         >
           Our Goals
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in-up stagger-2" style={{ fontFamily: 'Orbitron, sans-serif' }}>
           Goals of <span className="text-[#00d4ff]">FutureBright</span> IT Solutions
         </h2>
-        <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p className="text-slate-400 text-lg max-w-2xl mx-auto animate-fade-in-up stagger-3">
           What we aim for—quality, innovation, and people.
         </p>
       </div>
@@ -48,14 +49,17 @@ export const Objectives: React.FC = () => {
             className={`flex ${idx % 2 === 0 ? 'justify-start' : 'justify-end'}`}
           >
             <div
-              className="glass rounded-2xl p-8 flex flex-col items-center text-center border transition-all duration-300 hover:scale-[1.02] w-full max-w-md"
+              className={`glass rounded-2xl p-8 flex flex-col items-center text-center border transition-all duration-300 hover:scale-[1.02] w-full max-w-md ${slideClasses[idx]}`}
               style={{
                 borderColor: `${goal.color}30`,
                 boxShadow: `0 0 30px ${goal.color}15`,
+                animationDelay: `${0.2 + idx * 0.15}s`,
+                animationFillMode: 'forwards',
+                opacity: 0,
               }}
             >
               <div
-                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
+                className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 animate-pulse-glow ${idx === 0 ? 'animate-float-subtle' : idx === 1 ? 'animate-float-delay' : 'animate-float-slow'}`}
                 style={{
                   background: `${goal.color}20`,
                   boxShadow: `0 0 24px ${goal.color}30`,

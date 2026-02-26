@@ -206,19 +206,19 @@ export const GitCommands: React.FC = () => {
     <div className="max-w-4xl mx-auto relative z-10 min-h-[80vh] flex flex-col">
       <div className="text-center mb-8">
         <div
-          className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-3"
+          className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-3 animate-fade-in-down stagger-1"
           style={{ background: 'rgba(0, 212, 255, 0.1)', border: '1px solid rgba(0, 212, 255, 0.3)', color: '#00d4ff' }}
         >
           Git &amp; GitHub
         </div>
-        <h2 className="text-2xl md:text-4xl font-bold mb-2" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+        <h2 className="text-2xl md:text-4xl font-bold mb-2 animate-fade-in-up stagger-2" style={{ fontFamily: 'Orbitron, sans-serif' }}>
           Essential <span className="gradient-text">Git Commands</span>
         </h2>
-        <p className="text-slate-400 text-sm">One command at a time — use arrows or dots to navigate.</p>
+        <p className="text-slate-400 text-sm animate-fade-in-up stagger-3">One command at a time — use arrows or dots to navigate.</p>
       </div>
 
       {/* Big tab: one command visible */}
-      <div className="flex-1 glass rounded-2xl border border-[#00d4ff]/20 overflow-hidden flex flex-col min-h-[420px]">
+      <div className="flex-1 glass rounded-2xl border border-[#00d4ff]/20 overflow-hidden flex flex-col min-h-[420px] animate-scale-in stagger-4">
         <div className="p-8 md:p-10 flex flex-col flex-1">
           <div className="flex items-center gap-4 mb-6">
             <div
@@ -271,7 +271,7 @@ export const GitCommands: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-6 text-center">
+      <div className="mt-6 text-center animate-fade-in stagger-6">
         <span className="text-slate-500 text-sm">
           <GitBranch className="w-4 h-4 inline mr-1 text-[#f5a623] align-middle" />
           Command {activeIndex + 1} of {total}
@@ -280,13 +280,13 @@ export const GitCommands: React.FC = () => {
 
       {/* Section: Local branch, create, checkout, merge */}
       <div className="mt-14 pt-10 border-t border-[#00d4ff]/20">
-        <h3 className="text-xl md:text-2xl font-bold mb-6 text-[#00d4ff]" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+        <h3 className="text-xl md:text-2xl font-bold mb-6 text-[#00d4ff] animate-fade-in-up stagger-1" style={{ fontFamily: 'Orbitron, sans-serif' }}>
           Branches: Create, Switch &amp; Merge
         </h3>
 
         <div className="space-y-8">
           {/* What is local branch */}
-          <div className="glass rounded-2xl p-6 border border-[#00d4ff]/20">
+          <div className="glass rounded-2xl p-6 border border-[#00d4ff]/20 animate-fade-in-right stagger-2">
             <h4 className="text-lg font-bold mb-3 text-[#f5a623]" style={{ fontFamily: 'Orbitron, sans-serif' }}>
               What is a local branch?
             </h4>
@@ -298,7 +298,7 @@ export const GitCommands: React.FC = () => {
           </div>
 
           {/* Create branch + Checkout */}
-          <div className="glass rounded-2xl p-6 border border-[#2ecc71]/20">
+          <div className="glass rounded-2xl p-6 border border-[#2ecc71]/20 animate-fade-in-left stagger-3">
             <h4 className="text-lg font-bold mb-4 text-[#2ecc71]" style={{ fontFamily: 'Orbitron, sans-serif' }}>
               Create a local branch &amp; switch to it
             </h4>
@@ -328,7 +328,7 @@ export const GitCommands: React.FC = () => {
           </div>
 
           {/* Merge into main */}
-          <div className="glass rounded-2xl p-6 border border-[#f5a623]/20">
+          <div className="glass rounded-2xl p-6 border border-[#f5a623]/20 animate-fade-in-up stagger-4">
             <h4 className="text-lg font-bold mb-4 text-[#f5a623]" style={{ fontFamily: 'Orbitron, sans-serif' }}>
               Merge your local branch into main
             </h4>

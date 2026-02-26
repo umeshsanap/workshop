@@ -161,21 +161,21 @@ export const MediaPage: React.FC = () => {
     <div className="max-w-5xl mx-auto relative z-10 min-h-[80vh] flex flex-col">
       <div className="text-center mb-6">
         <div
-          className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-3"
+          className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-3 animate-fade-in-down stagger-1"
           style={{ background: 'rgba(245, 166, 35, 0.1)', border: '1px solid rgba(245, 166, 35, 0.3)', color: '#f5a623' }}
         >
           Gallery
         </div>
-        <h2 className="text-2xl md:text-4xl font-bold mb-2" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+        <h2 className="text-2xl md:text-4xl font-bold mb-2 animate-fade-in-up stagger-2" style={{ fontFamily: 'Orbitron, sans-serif' }}>
           <span className="gradient-text">Images & Videos</span>
         </h2>
-        <p className="text-slate-400 text-sm">One at a time — use arrows or dots to switch. HEIC images are converted to view in all browsers.</p>
+        <p className="text-slate-400 text-sm animate-fade-in-up stagger-3">One at a time — use arrows or dots to switch. HEIC images are converted to view in all browsers.</p>
       </div>
 
       <div className="flex-1 flex flex-col items-center gap-6">
         {/* Main viewer - larger for clear video playback */}
         <div
-          className="w-full rounded-2xl overflow-hidden glass border border-[#00d4ff]/20 relative"
+          className="w-full rounded-2xl overflow-hidden glass border border-[#00d4ff]/20 relative animate-scale-in stagger-4"
           style={{
             boxShadow: '0 0 20px rgba(0, 212, 255, 0.2), 0 0 40px rgba(0, 212, 255, 0.1)',
             minHeight: '360px',

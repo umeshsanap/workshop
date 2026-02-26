@@ -72,7 +72,7 @@ const App: React.FC = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 rounded-full flex items-center justify-center z-40 transition-all transform hover:scale-110"
+          className="fixed bottom-8 right-8 w-12 h-12 rounded-full flex items-center justify-center z-40 transition-all transform hover:scale-110 animate-float-subtle animate-glow-pulse"
           style={{
             background: 'linear-gradient(135deg, #00d4ff, #2ecc71)',
             boxShadow: '0 0 20px rgba(0, 212, 255, 0.4)'
@@ -83,7 +83,7 @@ const App: React.FC = () => {
       )}
 
       <footer
-        className="py-10 px-4 text-center relative z-10"
+        className="py-10 px-4 text-center relative z-10 animate-shine"
         style={{
           background: 'rgba(5, 13, 24, 0.98)',
           borderTop: '1px solid rgba(0, 212, 255, 0.1)'
